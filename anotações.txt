@@ -1,6 +1,16 @@
-﻿
+﻿HTML>
+    - Semântica, significado
+
+CSS>
+    - Estilo, forma
+
+### Dicas
+    -> O tamanho de imagens é muito importante no site, pois o usuário que irá acessar precisará baixar todas as imagens, imagens pesadas resultam em uma maior demora para o site ser carregado.
+
+
 ### Atalhos
     Inserir ! em um documento vazio sugere a estrutura padrão do html
+    CTRL + SHIFT + P        -> Abre menu de configurações/atalhos do visual code # envelope de assinatura
 
 ### Tags padrão
     # <!DOCTYPE html>           -> Indica ao navegador a versão de html utilizada no código, que se não especificada é o html5.
@@ -15,6 +25,8 @@
     <h3>
     <p>
     <br>
+    <img src="">
+    <address>
 
 ### Códigos de caracteres
     # <         -> &lt; (less than)
@@ -22,9 +34,10 @@
     # ®️         -> &reg; (Marca registrada)
     # ©️         -> &copy;
     # ™️         -> &trade; 
-    &euro
-    &pound
-    &yen
-    &cent
-    &delta
-    &Delta
+    # €         -> &euro;
+    # £         -> &pound;
+    # ¥         -> &yen;
+    # ¢         -> &cent;
+    # δ         -> &delta;
+    # Δ         -> &Delta;
+    # EMOJIS    -> &#x >> 1F596 <<;
