@@ -1,0 +1,102 @@
+﻿HTML>
+    - Semântica, significado
+
+CSS>
+    - Estilo, forma
+
+### Formatos de arquivos
+    ## Imagens
+        # PNG
+        # JPG
+
+    ## Videos
+        # MP4
+        # WEBm
+        # MKV
+        # OGV
+
+    ## Áudios
+        # MP3
+        # OGG
+        # WAV
+    
+
+### Videos externos
+    ## Youtube
+        # Menos qualidade, menos fluído
+        # Menos demora para carregar
+        # Pode aparecer propagandas e recomendações de outros vídeos
+        # Grátis
+
+    ## Vimeo
+        # Mais qualidade, mais fluido
+        # Mais customização
+        # Mais profissional, sem propagandas
+        # Pago
+
+### Dicas
+    -> O tamanho de imagens é muito importante no site, pois o usuário que irá acessar precisará baixar todas as imagens, imagens pesadas resultam em uma maior demora para o site ser carregado.
+    -> Não utilizar arquivos de áudio WAV pois são pesados.
+    -> Vídeos hospedados localmente consomem muito tráfego de dados da hospedagem do site.
+    -> Mesmo que o vídeo seja "não listado" no youtube, corre o risco de uma pessoa pegar o link e incorporar em alguma página para utilizar o seu vídeo.
+
+
+### Atalhos
+    Inserir ! em um documento vazio sugere a estrutura padrão do html
+    CTRL + SHIFT + P        -> Abre menu de configurações/atalhos do visual code # envelope de assinatura
+
+### Tags padrão
+    # <!DOCTYPE html>           -> Indica ao navegador a versão de html utilizada no código, que se não especificada é o html5.
+
+### Tags HEAD (Configurações do site)
+    # <meta charset="">         -> Define a codificação utilizada pelo site, utilizar UTF-8, para funcionar acentuação
+    # <meta viewport"...>       -> Informa ao navegador que o body irá utilizar 100% do espaço disponivel do navegador
+    # <title>
+
+### Tags BODY (Conteúdo do site)
+    <h1>
+    <h3>
+    <p>
+    <br>
+    <img src="">
+    <address>
+    <code>          -> Tag para definir fonte mono espaçada.
+    <pre>           -> Pré-formatação do texto
+    <a href="">
+        target="_blank"
+        rel="external"
+    <audio>
+        preload (auto, metadata, none)
+        muted
+        autoplay
+        controls
+        loop
+
+### Listas
+    ## Listas ordenadas <ol> (A ordem dos elementos da lista faz sentido)
+        # <ol type="">          -> Diferentes formas de contar
+            types: 1, A, a, I, i 
+
+    ## Listas não ordenadas <ul> (A ordem dos elementos da lista não tem relação)
+        # <ul type="">
+            types: disc, circle, square
+
+    ## Listas de definição
+        # dl
+        # dt
+        # dd
+
+
+### Códigos de caracteres
+    # <         -> &lt; (less than)
+    # <         -> &gt; (greater than)
+    # ®️         -> &reg; (Marca registrada)
+    # ©️         -> &copy;
+    # ™️         -> &trade; 
+    # €         -> &euro;
+    # £         -> &pound;
+    # ¥         -> &yen;
+    # ¢         -> &cent;
+    # δ         -> &delta;
+    # Δ         -> &Delta;
+    # EMOJIS    -> &#x >> 1F596 <<;
