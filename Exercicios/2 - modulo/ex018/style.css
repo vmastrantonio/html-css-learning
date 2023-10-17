@@ -1,0 +1,11 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    color: black;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+}

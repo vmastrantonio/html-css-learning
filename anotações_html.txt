@@ -44,6 +44,7 @@ CSS>
 ### Atalhos
     Inserir ! em um documento vazio sugere a estrutura padrão do html
     CTRL + SHIFT + P        -> Abre menu de configurações/atalhos do visual code # envelope de assinatura
+    lorem100 -> Gera um texto lorem com 100 palavras
 
 ### Tags padrão
     # <!DOCTYPE html>           -> Indica ao navegador a versão de html utilizada no código, que se não especificada é o html5.

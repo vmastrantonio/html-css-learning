@@ -1,1 +1,66 @@
-﻿
+﻿CSS -> Cascading Style Sheets, ou seja, Folhas de estilo em cascatas.
+
+### Regras CSS
+    ## @charset "UTF-8";        -> Define o padrão de codificação para UTF-8, para evitar problemas de acentuação.
+
+
+### CSS podem ser aplicadas de 3 formas inline, interno, externo. Nessa ordem de precedência.
+    ## inline            -> Adiciona uma estilização para uma única tag, diretamente no html.        Exp: <h1 style="color: white;></h1>
+
+    ## interno              -> Estilização no head do site, ainda dentro do arquivo html, pode ser aplicado para quais tags forem necessárias (desvantagens: normalmente ocupa mais linhas que o próprio html, se tiver mais de uma página que precisasse utilizar o mesmo estilo, o style não seria acessivel por outra pagina)
+
+    ## externo              -> Estilização em arquivo externo, permite que mais de uma página utilize a mesma estilização e facilita a alteração de estilização geral do site.
+
+### Dicas
+    ## No mesmo arquivo podemos utilizar todas formas de css misturadas, inline, interno e externo.
+
+    ## Evitar usar inline ao máximo
+
+    ## Utilizar css interno só para estilizações pequenas ou preferênciais, se crescer, utilizar o externo.
+
+    background-color
+    color
+    font-size
+    text-align (justify, center)
+
+    font-size do body define o tamanho de fonte padrão do site
+    em é uma medida proporcional ao font-size do site.
+
+* Ao definir uma fonte, pode especificar outras fontes em ordem, caso aquela não esteja disponível, exemplo font-family: Arial, Helvetica, sans-serif;
+
+* Uma fonte também pode ser definida pela sua categoria, onde o dispositivo irá utilizar uma fonte respectiva disponivel daquela categoria, exemplo font-family: monospace;
+
+* Sempre terminar uma safe combination com uma categoria de fontes, para evitar que o usuário não consiga carregar as fontes do site
+
+## Medidas absolutas 
+    * Recomendado a utilização apenas do PX
+    cm  -> centimetros na tela
+    mm  -> milimetros na tela
+    in  -> polegadas na tela
+    px  -> pixels na tela
+    pt  -> ponto
+    pc  -> paica?
+
+
+## Medidas relativas
+    * Recomendado a utilização apenas do EM
+    em -> relativo a largura da letra m
+    ex -> relativo a altura da letra x
+    rem -> relativo ao root, fonte configurada no body
+    vw -> relativa a largura da viewport
+    vh -> relativa a altura da viewport
+    % -> percentagem de alguma coisa
+
+16px (tamanho padrão da fonte) = 1em
+
+(depende da disponibilidade da fonte)
+font-family
+font-weight (lighter, normal, bold, bolder) ou de 100 a 900.
+font-style (normal, italic)
+text-decoration (underline)
+ 
+ shorthand font
+ * Abreviação das 4 propriedades acima em uma só
+ font: italic bolder 3em 'Work Sans', sans-serif
+
+ * pode não especificar alguma propriedade, porem a ordem deve-se manter
