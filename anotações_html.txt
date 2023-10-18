@@ -1,126 +1,110 @@
-﻿HTML>
-    - Semântica, significado
+﻿### Significado do HTML
+    -> HTML (HyperText Markup Language) é uma linguagem de marcação de hipertexto usada para criar e estruturar o conteúdo de páginas da web. Ele define elementos que representam diferentes tipos de conteúdo, como textos, imagens, links e multimídia, e fornece a estrutura e a semântica necessárias para a apresentação e interpretação do conteúdo em navegadores da web. O HTML é a base da maioria das páginas da web e permite aos desenvolvedores criar páginas interativas e acessíveis.
 
-CSS>
-    - Estilo, forma
 
-### Formatos de arquivos
+### Atributos comuns
+    ## ID's e classes
+        # ID (Nome de identificação único definido a um único elemento)
+            - <div id="div-principal">          -> No CSS acessamos o elemento através de #         -> Exemplo de CSS: div#div-principal {}
+
+        # Classe (Nome de identificação de uma classe a ser personalizada, mais de um elemento pode receber a mesma classe)
+            - <h1 class="texto-principal">          -> No CSS acessamos o elemento através de .         -> Exemplo de CSS: .texto-principal {}
+            - <h2 class="texto-principal">
+
+    ## Conexões entre arquivos
+        # src           -> O atributo src é comumente usado em elementos de mídia, como <img> e <audio>, para especificar o caminho do arquivo de origem.           -> Exp: <img src="imagem.jpg">
+        # href          -> O atributo href é usado em elementos de âncora (<a>) para definir o URL de destino do link.                                              -> Exp: <a href="https://www.exemplo.com">Aqui</a>
+
+    ## acessibilidade
+        # alt           -> O atributo alt é usado em elementos de imagem (<img>) para fornecer uma descrição alternativa da imagem.         -> Exp: <img src="foto.jpg" alt="Família se divertindo em um parque de diversões">
+
+### Tags
+    ## Tags PADRÃO
+        <!DOCTYPE html>         -> Indica a versão do HTML usada no código (por padrão, HTML5).
+        <html>                  -> Define a área de conteúdo HTML
+        <!-- --!>               -> Define uma área para fazer comentários sobre o código
+
+    ## Tags HEAD (Define a seção de metadados do documento, incluindo informações sobre a página, tais como título, codificação de caracteres, e conexões com arquivos CSS ou ícones.)
+        <meta charset="UTF-8">                                                      -> Define a codificação de caracteres a ser utilizada pelo site, permitindo a exibição correta de caracteres e acentuação.
+        <meta name="viewport" content="...">                                        -> Informa ao navegador que o conteúdo do <body> utilizará 100% do espaço disponível.
+        <meta name="description">                                                   -> Define uma descrição da página para os mecanismos de busca
+        <title>                                                                     -> Define o título da página exibido na barra de título do navegador.
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">           -> Define o favicom da página
+        <link rel="stylesheet" href="style.css">                                    -> Define a folha de estilização da página (CSS)
+        <style>                                                                     -> Define uma área para adicionar estilos CSS diretamente no arquivo HTML.
+
+    ## Tags BODY (Definea a área de conteúdo visível em uma página da web. Incluindo texto, imagens, links e outros elementos visuais)
+        # Elementos de categorização
+            <div>               -> Elemento de bloco que ocupa uma linha inteira na página.
+            <span>              -> Elemento de linha para agrupar elementos em linha, usado para fins de estilo ou compartilhamento de atributos.
+
+        # Elementos de Texto:
+            <h1>, <h2>, <h3>, <h4>         -> Títulos de diferentes níveis.
+            <p>                            -> Parágrafos de texto.
+
+        # Elementos de formatação de texto:
+            <em>                -> Usado para destacar texto com ênfase.
+            <address>           -> Informações de endereço.
+            <strong>            -> Usado para denotar um texto de grande importância
+            <cite>              -> Indica que o texto é uma referência ou citação de outra fonte
+            <abbr>              -> Define uma abreviação e fornece um texto explicativo quando o usuário passa o mouse sobre
+            <time>              -> Usado para representar datas e horas em um formato específico
+            <code>              -> Define texto com fonte monoespaçada.
+            <pre>               -> Pré-formatação de texto.
+
+        # Elementos de Mídia:
+            <img>                   -> Insere imagens.
+            <audio>                 -> Reproduzir áudio com opções como preload, muted, autoplay, controls e loop.
+
+        # Outros Elementos:
+            <br>                -> Quebra de linha.
+            <a href="">         -> Cria links âncora.
+
+
+
+### Multimídia
+    ## Dicas
+        - Atributo alt para Imagens: Todos os elementos de imagem <img> devem incluir o atributo alt, que fornece uma descrição alternativa para a imagem. Isso é essencial para acessibilidade e ajuda os usuários com deficiência visual a compreender o conteúdo da imagem.
+        - Tamanho de Mídias: O tamanho das mídias, como imagens, vídeos e áudios, é crucial. Imagens pesadas podem resultar em tempos de carregamento mais longos, afetando a experiência do usuário. Sempre otimize as imagens para a web.
+        - Midias Locais vs. Remotas: Midias locais precisam ser baixadas pelos clientes e consomem largura de banda do servidor. Midias remotas não consomem largura de banda do servidor, mas a disponibilidade pode não ser garantida.
+        - Formato de Vídeo: Para vídeos locais, use formatos como MP4, WEBM e MKV para garantir a compatibilidade com diversos navegadores. Evite arquivos WAV devido ao seu tamanho.
+        - Vídeos Remotos: Ao usar vídeos remotos, considere serviços como o YouTube (gratuito, mais rápido, mas menor qualidade) ou o Vimeo (pago, maior qualidade e personalização).    
+
     ## Imagens
-        # PNG
-        # JPG
+        # Imagens Locais (Imagens locais precisam ser baixadas pelos clientes e consomem banda do servidor)
+            - Use formatos como PNG e JPG.
 
-    ## Videos
-        # MP4
-        # WEBm
-        # MKV
-        # OGV
+        # Imagens Remotas (Imagens remotas não consomem banda do servidor porém não podemos garantir a disponibilidade da imagem)
+            - Referencie imagens hospedadas em servidores externos.
+
+    ## Vídeos
+        # Vídeos Locais (Vídeos locais precisam ser baixadas pelos clientes e consomem banda do servidor)
+            - Aceitam formatos como MP4, WEBM, MKV e WAV.
+
+        # Vídeos Remotos (Vídeos remotos não consomem banda do servidor porém não podemos garantir a disponibilidade do vídeo)
+            - Utilize serviços como YouTube (gratuito, menos qualidade e mais rápido) ou Vimeo (pago, mais qualidade e maior customização).
 
     ## Áudios
-        # MP3
-        # OGG
-        # WAV
-    
+        Formatos aceitos incluem MP3, OGG e WAV.
 
-### Videos externos
-    ## Youtube
-        # Menos qualidade, menos fluído
-        # Menos demora para carregar
-        # Pode aparecer propagandas e recomendações de outros vídeos
-        # Grátis
 
-    ## Vimeo
-        # Mais qualidade, mais fluido
-        # Mais customização
-        # Mais profissional, sem propagandas
-        # Pago
 
-### Dicas
-    -> O tamanho de imagens é muito importante no site, pois o usuário que irá acessar precisará baixar todas as imagens, imagens pesadas resultam em uma maior demora para o site ser carregado.
-    -> Não utilizar arquivos de áudio WAV pois são pesados.
-    -> Vídeos hospedados localmente consomem muito tráfego de dados da hospedagem do site.
-    -> Mesmo que o vídeo seja "não listado" no youtube, corre o risco de uma pessoa pegar o link e incorporar em alguma página para utilizar o seu vídeo.
+### Listas (Itens para listas ordenadas e não ordenadas são definidos por <li> </li>)
+    ## Listas Ordenadas (ordem dos elementos importa)
+        <ol type="">            -> Cria listas ordenadas com tipos como 1, A, a, I, i.
+
+    ## Listas Não Ordenadas (ordem dos elementos não importa)
+        <ul type="">            -> Cria listas não ordenadas com tipos como disc, circle e square.
+
+    ## Listas de Definição (Listas para atribuir uma coisa a outra)
+        <dl>            -> Lista de definição.
+        <dt>            -> Termo ou título da definição.
+        <dd>            -> Definição do termo.
+
 
 
 ### Atalhos
-    Inserir ! em um documento vazio sugere a estrutura padrão do html
-    CTRL + SHIFT + P        -> Abre menu de configurações/atalhos do visual code # envelope de assinatura
-    lorem100 -> Gera um texto lorem com 100 palavras
-
-### Tags padrão
-    # <!DOCTYPE html>           -> Indica ao navegador a versão de html utilizada no código, que se não especificada é o html5.
-
-### Tags HEAD (Configurações do site)
-    # <meta charset="">         -> Define a codificação utilizada pelo site, utilizar UTF-8, para funcionar acentuação
-    # <meta viewport"...>       -> Informa ao navegador que o body irá utilizar 100% do espaço disponivel do navegador
-    # <title>
-
-### Tags BODY (Conteúdo do site)
-    <h1>
-    <h3>
-    <p>
-    <br>
-    <img src="">
-    <address>
-    <code>          -> Tag para definir fonte mono espaçada.
-    <pre>           -> Pré-formatação do texto
-    <a href="">
-        target="_blank"
-        rel="external"
-    <audio>
-        preload (auto, metadata, none)
-        muted
-        autoplay
-        controls
-        loop
-    <span> é um conteiner generico em linha para conteúdo fraseado , que não representa nada por natureza. Ele pode ser usado para agrupar elementos para fins de estilo (usando os atributos class ou id ), ou para compartilhar valores de atributos como lang. Ele deve ser usado somente quando nenhum outro elemento semântico for apropriado. <span> é muito parecido com o elemento <div> , entretando <div> é um elemento de nível de bloco enquanto <span> é um elemento em linha.
-
-### Listas
-    ## Listas ordenadas <ol> (A ordem dos elementos da lista faz sentido)
-        # <ol type="">          -> Diferentes formas de contar
-            types: 1, A, a, I, i 
-
-    ## Listas não ordenadas <ul> (A ordem dos elementos da lista não tem relação)
-        # <ul type="">
-            types: disc, circle, square
-
-    ## Listas de definição
-        # dl
-        # dt
-        # dd
-
-
-### Códigos de caracteres
-    # <         -> &lt; (less than)
-    # <         -> &gt; (greater than)
-    # ®️         -> &reg; (Marca registrada)
-    # ©️         -> &copy;
-    # ™️         -> &trade; 
-    # €         -> &euro;
-    # £         -> &pound;
-    # ¥         -> &yen;
-    # ¢         -> &cent;
-    # δ         -> &delta;
-    # Δ         -> &Delta;
-    # EMOJIS    -> &#x >> 1F596 <<;
-
-@font-face {
-    font-family ;
-    src: url() format();
-}
-
-Tipos de format()
-    - opentype (ttf)
-    - truetype (ttf)
-    - embedded-opentype
-    - truetype-aat (Apple Advanced Typography) 
-    - svg
-
-* dar preferência para especificar além do id ou classe o elemento a ser personalizado
-
-Não utilizar o mesmo ID para dois elementos diferentes dentro de um HTML (recomendação da w3c)
-
-ID é único
-CLASSE pode ser multiplo
-
-tudo que em html é ID em CSS é #
-tudo que em html é CLASS em CSS é .
+    -> Para rodar um código utilizar F5 que abre o navegador automaticamente.
+    -> Para criar a estrutura padrão do HTML em um documento vazio, insira !.
+    -> No Visual Studio Code, use CTRL + SHIFT + P para acessar o menu de configurações e atalhos.
+    -> Digite lorem100 para gerar um texto lorem com 100 palavras.

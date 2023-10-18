@@ -65,3 +65,29 @@ Safe combination:
  https://www.w3schools.com/cssref/css_websafe_fonts.php
 
  fonts ninja extensão que verifica nome de fonte
+
+ ### Códigos de caracteres
+    # <         -> &lt; (less than)
+    # <         -> &gt; (greater than)
+    # ®️         -> &reg; (Marca registrada)
+    # ©️         -> &copy;
+    # ™️         -> &trade; 
+    # €         -> &euro;
+    # £         -> &pound;
+    # ¥         -> &yen;
+    # ¢         -> &cent;
+    # δ         -> &delta;
+    # Δ         -> &Delta;
+    # EMOJIS    -> &#x >> 1F596 <<;
+
+@font-face {
+    font-family ;
+    src: url() format();
+}
+
+Tipos de format()
+    - opentype (ttf)
+    - truetype (ttf)
+    - embedded-opentype
+    - truetype-aat (Apple Advanced Typography) 
+    - svg

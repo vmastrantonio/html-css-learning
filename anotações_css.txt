@@ -1,69 +1,101 @@
-﻿CSS -> Cascading Style Sheets, ou seja, Folhas de estilo em cascatas.
-
-### Regras CSS
-    ## @charset "UTF-8";        -> Define o padrão de codificação para UTF-8, para evitar problemas de acentuação.
-
-formas de centralizar texto:
-    text-align (left, center, right)
-    text-indent (medida)
-
-### CSS podem ser aplicadas de 3 formas inline, interno, externo. Nessa ordem de precedência.
-    ## inline            -> Adiciona uma estilização para uma única tag, diretamente no html.        Exp: <h1 style="color: white;></h1>
-
-    ## interno              -> Estilização no head do site, ainda dentro do arquivo html, pode ser aplicado para quais tags forem necessárias (desvantagens: normalmente ocupa mais linhas que o próprio html, se tiver mais de uma página que precisasse utilizar o mesmo estilo, o style não seria acessivel por outra pagina)
-
-    ## externo              -> Estilização em arquivo externo, permite que mais de uma página utilize a mesma estilização e facilita a alteração de estilização geral do site.
-
-### Dicas
-    ## No mesmo arquivo podemos utilizar todas formas de css misturadas, inline, interno e externo.
-
-    ## Evitar usar inline ao máximo
-
-    ## Utilizar css interno só para estilizações pequenas ou preferênciais, se crescer, utilizar o externo.
-
-    background-color
-    color
-    font-size
-    text-align (justify, center)
-
-    font-size do body define o tamanho de fonte padrão do site
-    em é uma medida proporcional ao font-size do site.
-
-* Ao definir uma fonte, pode especificar outras fontes em ordem, caso aquela não esteja disponível, exemplo font-family: Arial, Helvetica, sans-serif;
-
-* Uma fonte também pode ser definida pela sua categoria, onde o dispositivo irá utilizar uma fonte respectiva disponivel daquela categoria, exemplo font-family: monospace;
-
-* Sempre terminar uma safe combination com uma categoria de fontes, para evitar que o usuário não consiga carregar as fontes do site
-
-## Medidas absolutas 
-    * Recomendado a utilização apenas do PX
-    cm  -> centimetros na tela
-    mm  -> milimetros na tela
-    in  -> polegadas na tela
-    px  -> pixels na tela
-    pt  -> ponto
-    pc  -> paica?
+﻿### Significado de CSS
+    -> CSS (Cascading Style Sheets) é uma linguagem de folha de estilo utilizada em conjunto com o HTML para controlar a apresentação e o design de páginas da web. Enquanto o HTML cuida da estrutura e do conteúdo de uma página, o CSS lida com o aspecto visual e a formatação dessa página. Em outras palavras, o CSS define como os elementos HTML devem ser exibidos na tela, incluindo aspectos como cores, fontes, espaçamentos, tamanhos e posicionamento.
 
 
-## Medidas relativas
-    * Recomendado a utilização apenas do EM
-    em -> relativo a largura da letra m
-    ex -> relativo a altura da letra x
-    rem -> relativo ao root, fonte configurada no body
-    vw -> relativa a largura da viewport
-    vh -> relativa a altura da viewport
-    % -> percentagem de alguma coisa
 
-16px (tamanho padrão da fonte) = 1em
+### Regras CSS (São definidas por @ e devem sempre estar nas primeiras linhas do conteúdo CSS)
+    ## @charset "UTF-8";                                                -> Define o padrão de codificação para UTF-8, para evitar problemas de acentuação.
+    ## @import url('');                                                 -> Permite a importação de conteúdos externos, como fontes, para um documento CSS
+    ## @fontface {font-family:;, src: url("") format(""); , font-weight:;, font-style:;}            -> Permite a importação de uma nova fonte armazenada localmente.
+        # format: "opentype" (ttf), "truetype" (ttf), "embedded-opentype", "truetype-aat" (Apple Advanced Typography), "svg"
 
-(depende da disponibilidade da fonte)
-font-family
-font-weight (lighter, normal, bold, bolder) ou de 100 a 900.
-font-style (normal, italic)
-text-decoration (underline)
- 
- shorthand font
- * Abreviação das 4 propriedades acima em uma só
- font: italic bolder 3em 'Work Sans', sans-serif
 
- * pode não especificar alguma propriedade, porem a ordem deve-se manter
+
+### Diferentes maneiras de aplicar CSS
+    ## Dicas
+        # Utilizar a forma interna de aplicação CSS só para estilizações pequenas ou preferênciais
+        # Exitar ao máximo utilizar a aplicação de CSS inline, pois dificulta alterações e manutenção;
+        # No mesmo arquivo HTML, podem ser utilizadas todas formas de aplicação de CSS (inline, interno e externo) ao mesmo tempo;
+
+    ## externo          -> É a forma recomendada, o CSS fica em um arquivo externo, podendo personalizar todas às páginas HTML que forem conectadas a ele, através da tag HTML <link rel="stylesheet" ...>
+    ## interno          -> O conteúdo CSS fica dentro de uma tag <style></style> dentro do próprio arquivo HTML, impossibilitando que a estilização seja utilizada por outras páginas.
+    ## inline           -> É a forma menos recomendada, a estilização é feita diretamente no elemento HTML, dificultando muito a manutenção e alteração.
+
+
+
+### Hierarquia de Seletores CSS
+    ## Seletores básicos
+        # Seletores de Tipo:            -> Os seletores de tipo aplicam estilos a todos os elementos de um tipo específico. Por exemplo, p seleciona todos os parágrafos.
+        # Seletores de Classe:          -> Os seletores de classe aplicam estilos a elementos que possuem uma classe específica. Por exemplo, .destaque aplicará estilos a todos os elementos com a classe "destaque".
+        # Seletores de ID:              -> Os seletores de ID aplicam estilos a um elemento com um ID específico. Por exemplo, #cabecalho aplicará estilos ao elemento com o ID "cabecalho".
+
+    ## Seletores compostos
+        # Seletores Aninhados:      -> Você pode criar seletores aninhados para aplicar estilos a elementos específicos dentro de outros elementos. Por exemplo, div p selecionará todos os parágrafos que estão dentro de um elemento div.
+        # Combinadores:                     -> Combinadores, como o seletor > (child combinator), permitem selecionar elementos com base em sua relação hierárquica com outros elementos. Por exemplo, div > p selecionará todos os parágrafos que são filhos diretos de um elemento div.
+
+
+### Pseudo-classe (São seletores em CSS que permitem estilizar elementos com base em estados ou características específicas)
+    :hover:             -> Acionada quando o usuário passa o mouse por cima do elemento. É frequentemente usada para criar efeitos de destaque ou interatividade.
+    :active:            -> Acionada quando o usuário clica ou toca um elemento. É comumente usada para fornecer feedback de clique.
+
+
+
+### Medidas
+    ## Medidas absolutas -> (Medidas absolutas são fixas e podem variar de dispositivo para dispositivo, não se ajustando automaticamente às preferências do usuário ou ao tamanho da tela.)
+        - px (pixels)               -> Recomendado para elementos de tamanho fixo, como bordas e imagens.
+        - cm (centimetros)          -> Medida em centímetros na tela.
+        - mm (milimetros)           -> Medida em milimetros na tela.
+        - in (polegadas)            -> Medida em polegadas na tela.
+        - pt (pontos)               -> Medida em pontos.
+        - pc (paica)                -> Medida em paica.
+
+    ## Medidas relativas -> (Medidas relativas são proporcionais a algum elemento da página, permitindo uma maior padronização de tamanhos e adaptando-se às preferências do usuário e ao tamanho da tela.)
+        - em (em)                       -> Relativa em relação à largura da letra "m". Recomendada para dimensionar fontes e outros elementos de acordo com o tamanho do texto.
+        - rem (rem)                     -> Relativa ao valor de fonte definido no elemento raiz (normalmente definido no elemento "body"). Útil para dimensionar elementos em relação ao tamanho do texto base.
+        - vw (viewport width)           -> Relativas à largura da janela de visualização do navegador. Útil para criar layouts responsivos com base no tamanho da tela do dispositivo.
+        - vh (viewport height)          -> Relativas à altura da janela de visualização do navegador. Útil para criar layouts responsivos com base no tamanho da tela do dispositivo.
+        - % (percentagem)               -> Relativa a uma porcentagem do elemento pai. Ideal para criar layouts flexíveis e responsivos.
+        - ex (ex)                       -> Relativa à altura da letra "x."
+
+
+
+### Atributos
+    ## Atributos de texto
+        # font-size             -> Define o tamanho da fonte, em medidas absolutas ou relativas
+        # font-family           -> Define uma fonte, ou a categoria de fontes que será utilizada, recomenda-se especificar mais de uma, pois caso a primeira não esteja disponível, a próxima será utilizada.
+        # font-weight           -> Define o peso da fonte, dependendo da disponibilidade da familia da fonte, normalmente (lighter, normal, bold, bolder)
+        # font-style            -> Define um dos estilos da fonte, dependendo da disponibilidade, normalmente (underline)
+
+        # text-decoration       -> Personaliza decorações do texto como sublinhado (underline)
+
+        # Shorthand (Abreviação de atributos para personalização de fontes)
+            # font: <font-style> <font-weight> <font-size> <font-family>            Exp: font: italic bolder 3em 'Work Sans', sans-serif
+
+    ## Atributos de posições
+        # padding           -> Especifica o espaço interno entre o conteúdo de um elemento e sua borda.
+        # margin            -> Define o espaço externo entre um elemento e os elementos ao seu redor, afetando o layout.
+
+    ## Atributos de posições para texto
+        # text-align            -> Atributo para alinhamento do texto, a esquerda, ao centro ou a direita, usando os respectivos atributos (left, center, right)
+        # text-indent           -> Adiciona uma indentação/margem de parágrafo, no começo do texto, de tamanho especificado.           Exp: text-indent: 10px;
+
+    ## Atributos relacionados a fundo
+        # background-color              -> Define a cor de fundo de um elemento.
+        # background-image              -> Permite adicionar uma imagem de fundo a um elemento, incluindo a opção de aplicar gradientes para criar transições suaves entre cores.
+            -> linear-gradient(to <DIREÇÃO>, <COR 1> <PRESENÇA>, <COR 2> <PRESENÇA>, <COR 3> <PRESENÇA>, <COR 4> <PRESENÇA>, <COR 5> <PRESENÇA>)
+            -> radial-gradient(to <FORMATO>, <COR 1> <PRESENÇA>, <COR 2> <PRESENÇA>, <COR 3> <PRESENÇA>, <COR 4> <PRESENÇA>, <COR 5> <PRESENÇA>)
+                - direção: to (right, left, graus)
+                - formato: (circle)
+                - presença: %
+
+        # background-attachment         -> Controla o comportamento do rolamento da imagem de fundo, com opções como "scroll" e "fixed."
+
+    ## Atributos de tamanho
+        # height            -> Define a altura de um elemento, geralmente especificada em unidades como "px," "%" ou "em."
+        # width:            -> Define a largura de um elemento, também em unidades como "px," "%" ou "em."
+
+
+
+ ### Padrões
+    ## Texto
+        - Por padrão, o tamanho de fonte de um parágrafo é de 16px, que é o mesmo que 1em.

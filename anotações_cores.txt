@@ -17,6 +17,7 @@ não utilizar menos de 3 cores ou mais de 5 para fazer um gradiente
 -> RGB
 
 O circulo cromático nos ajuda a entender a harmonia de cores:
+
 Classificação de cores:
     - Cores primárias (vermelho, amarelo e azul) - Posicionadas em forma de triângulo equilátero.
     - Cores secundarias (laranja, violeta e verde) - Posicionadas em forma de triângulo equilátero de cabeça para baixo.
