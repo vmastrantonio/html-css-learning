@@ -1,70 +1,21 @@
 ﻿TIPOGRAFIA -> Vem do grego týpos graphía (Que significa formas de escrever algo)
 
-Anatomia do tipo
-    - Altura das letras minusculas de uma fonte são baseadas na altura do caractere "x" e é chamado de altura-x
-    - Altura das letras maiusculas de uma fonte são baseados nas próprias letras maíuculas, que possuem mesma altura e são chamados de altura das maísculas
-    - A altura do vazamento (altura além do x) de letras como d, b, l, é chamada de altura de vazamento.
-    - A medida das cauda das letras, como em "Q" "g" "ç" são medidas por uma altura chamada ascendente
 
-    # Uma fonte é um conjunto de glifos de uma determinada família
-        # As vezes existem conjuntos de glifos para diferentes familia (light, normal, negrito)
 
-Categoria de fontes
+### Categoria de fontes
     # Fontes serifadas                          -> Possui serifas, que auxiliam o cérebro na leitura;
     # Fontes sans-serif                         -> Não possui serifas;
-        - Utilizar em textos muito longos
     # Fontes monoespaçada                       -> A largura de todas letras possuem o mesmo espaço;
     # Fontes handwriting                        -> Simula a escrita a mão;
     # Fontes display / comemorativas            -> Fontes que não se encaixam nas categorias anteriores;
 
-Componentes anatomicos geometricos
-    * Algumas fontes utilizam "serifas", que guiam a leitura e facilita a leitura, para ajudar o cérebro.
 
-    # Letras principalmente são formadas por hastes, arcos ou filetes que unem arcos.
 
-    # vértice é como chamamos as extremidades de letras onde duas astes são ligadas, como em A ou V.
+### Safe combination:
+	- Se não tiver uma opção de fonte, passa para a seguinte. (Pesquisar mais: CSS web safe font combinations).   Ex: font-family: Arial, Helvetica, sans-serif;
+    +info https://www.w3schools.com/cssref/css_websafe_fonts.php
 
-    # Terminal é como chamamos quando não está entre duas hastes ou arcos
 
-    # barriga
-
-    # braço
-
-    # perna
-
-    # espinha
-
-    # pé
-
-    # olho
-
-    # cauda
-
-    # orelha
-
-    * Algumas fontes utilizam "esporão", que é para simular uma escora, criar uma base da letra e não parecer que ela vai cair.
-
-fonte padrão navegadores: times new roman
-tamanho padrão de fonte: 16px
-
-Font-family mais comuns:    Arial, Verdana e Helvetica
-
-    font-family: 'Courier New';   -> nomes compostos precisam de 'aspas'
-    font-family: sans-serif;	    -> qualquer fonte sem serifa
-    font-family: serif;		    -> qualquer fonte com serifa
-    font-family: monospace;     -> qualquer fonte monoespaçada
-
-Safe combination:
-	Se não tiver uma opção de fonte, passa para a seguinte. (Pesquisar mais: CSS web safe font combinations). 
-
-	Ex:	font-family: Arial, Helvetica, sans-serif;
-		font-family: 'Times New Roman', Times, serif;
-
- *Dica: Após "font-family:", ao clicar Ctrl + Espaço, o VS Code sugere as principais safe combinations.
-
- https://www.w3schools.com/cssref/css_websafe_fonts.php
-
- fonts ninja extensão que verifica nome de fonte
 
  ### Códigos de caracteres
     # <         -> &lt; (less than)
@@ -80,14 +31,35 @@ Safe combination:
     # Δ         -> &Delta;
     # EMOJIS    -> &#x >> 1F596 <<;
 
-@font-face {
-    font-family ;
-    src: url() format();
-}
 
-Tipos de format()
-    - opentype (ttf)
-    - truetype (ttf)
-    - embedded-opentype
-    - truetype-aat (Apple Advanced Typography) 
-    - svg
+
+### Dicas
+    - Após "font-family:", ao clicar Ctrl + Espaço, o VS Code sugere as principais safe combinations.
+    - Extensão "fonts ninja" identifica todas fontes de um site em tempo real.
+
+
+
+Anatomia do tipo
+    - Altura das letras minusculas de uma fonte são baseadas na altura do caractere "x" e é chamado de altura-x
+    - Altura das letras maiusculas de uma fonte são baseados nas próprias letras maíuculas, que possuem mesma altura e são chamados de altura das maísculas
+    - A altura do vazamento (altura além do x) de letras como d, b, l, é chamada de altura de vazamento.
+    - A medida das cauda das letras, como em "Q" "g" "ç" são medidas por uma altura chamada ascendente
+
+    # Uma fonte é um conjunto de glifos de uma determinada família
+        # As vezes existem conjuntos de glifos para diferentes familia (light, normal, negrito)
+
+
+
+Componentes anatomicos geometricos
+    # Letras principalmente são formadas por hastes, arcos ou filetes que unem arcos.
+    # vértice é como chamamos as extremidades de letras onde duas astes são ligadas, como em A ou V.
+    # Terminal é como chamamos quando não está entre duas hastes ou arcos
+        # barriga
+        # braço
+        # perna
+        # espinha
+        # pé
+        # olho
+        # cauda
+        # orelha
+        * Algumas fontes utilizam "esporão", que é para simular uma escora, criar uma base da letra e não parecer que ela vai cair.
