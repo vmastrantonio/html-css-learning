@@ -3,6 +3,25 @@
 
 
 
+### Modelo de Caixa (Cada elemento visível em um site é encapsulado em uma caixa)
+    ## height (Altura)                  -> Define a dimensão vertical da caixa.
+    ## width (Largura)                  -> Define a dimensão horizontal da caixa.
+    ## border (Borda)                   -> Cria um contorno dentro da caixa.
+    ## outline (Contorno)               -> Cria um contorno ao redor da caixa.
+    ## padding (Preenchimento)          -> Ajusta a distância entre o conteúdo da caixa e a borda interna.
+    ## margin (Margem)                  -> Controla o espaço em torno da caixa, além do preenchimento.
+
+    ## Tipos de caixa
+        # Nível de Bloco (box-level): Elementos que ocupam a largura total da tela. Exemplos incluem:
+            - <div>             -> Usado para agrupar conteúdo em um bloco.
+            - <h1>-<h6>, <p>, <main>, <header>, <nav>, <article>, <aside>, <footer>, <form>, <video>    -> Elementos que representam seções ou estruturas de nível de bloco em uma página web.
+
+        # Nível Inline (inline-level): Elementos que ocupam apenas a largura especificada. Exemplos incluem:
+            - <span>            -> Usado para aplicar estilos a partes específicas ou conteúdo em linha.
+            - <a>, <code>, <small>, <strong>, <em>, <sup>-<sub>, <label>, <button>, <input>, <select>   -> Elementos que representam conteúdo em linha, como links, texto em destaque e campos de entrada.
+
+
+
 ### Tags
     ## Tags PADRÃO
         <!DOCTYPE html>         -> Indica a versão do HTML usada no código (por padrão, HTML5).
@@ -19,10 +38,6 @@
         <style>                                                                     -> Define uma área para adicionar estilos CSS diretamente no arquivo HTML.
 
     ## Tags BODY (Definea a área de conteúdo visível em uma página da web. Incluindo texto, imagens, links e outros elementos visuais)
-        # Elementos de categorização
-            <div>               -> Elemento de bloco que ocupa uma linha inteira na página.
-            <span>              -> Elemento de linha para agrupar elementos em linha, usado para fins de estilo ou compartilhamento de atributos.
-
         # Elementos de Texto:
             <h1>, <h2>, <h3>, <h4>         -> Títulos de diferentes níveis.
             <p>                            -> Parágrafos de texto.
