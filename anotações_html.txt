@@ -2,21 +2,6 @@
     -> HTML (HyperText Markup Language) é uma linguagem de marcação de hipertexto usada para criar e estruturar o conteúdo de páginas da web. Ele define elementos que representam diferentes tipos de conteúdo, como textos, imagens, links e multimídia, e fornece a estrutura e a semântica necessárias para a apresentação e interpretação do conteúdo em navegadores da web. O HTML é a base da maioria das páginas da web e permite aos desenvolvedores criar páginas interativas e acessíveis.
 
 
-### Atributos comuns
-    ## ID's e classes
-        # ID (Nome de identificação único definido a um único elemento)
-            - <div id="div-principal">          -> No CSS acessamos o elemento através de #         -> Exemplo de CSS: div#div-principal {}
-
-        # Classe (Nome de identificação de uma classe a ser personalizada, mais de um elemento pode receber a mesma classe)
-            - <h1 class="texto-principal">          -> No CSS acessamos o elemento através de .         -> Exemplo de CSS: .texto-principal {}
-            - <h2 class="texto-principal">
-
-    ## Conexões entre arquivos
-        # src           -> O atributo src é comumente usado em elementos de mídia, como <img> e <audio>, para especificar o caminho do arquivo de origem.           -> Exp: <img src="imagem.jpg">
-        # href          -> O atributo href é usado em elementos de âncora (<a>) para definir o URL de destino do link.                                              -> Exp: <a href="https://www.exemplo.com">Aqui</a>
-
-    ## acessibilidade
-        # alt           -> O atributo alt é usado em elementos de imagem (<img>) para fornecer uma descrição alternativa da imagem.         -> Exp: <img src="foto.jpg" alt="Família se divertindo em um parque de diversões">
 
 ### Tags
     ## Tags PADRÃO
@@ -59,6 +44,24 @@
         # Outros Elementos:
             <br>                -> Quebra de linha.
             <a href="">         -> Cria links âncora.
+
+
+
+### Atributos comuns
+    ## ID's e classes
+        # ID (Nome de identificação único definido a um único elemento)
+            - <div id="div-principal">          -> No CSS acessamos o elemento através de #         -> Exemplo de CSS: div#div-principal {}
+
+        # Classe (Nome de identificação de uma classe a ser personalizada, mais de um elemento pode receber a mesma classe)
+            - <h1 class="texto-principal">          -> No CSS acessamos o elemento através de .         -> Exemplo de CSS: .texto-principal {}
+            - <h2 class="texto-principal">
+
+    ## Conexões entre arquivos
+        # src           -> O atributo src é comumente usado em elementos de mídia, como <img> e <audio>, para especificar o caminho do arquivo de origem.           -> Exp: <img src="imagem.jpg">
+        # href          -> O atributo href é usado em elementos de âncora (<a>) para definir o URL de destino do link.                                              -> Exp: <a href="https://www.exemplo.com">Aqui</a>
+
+    ## Acessibilidade
+        # alt           -> O atributo alt é usado em elementos de imagem (<img>) para fornecer uma descrição alternativa da imagem.         -> Exp: <img src="foto.jpg" alt="Família se divertindo em um parque de diversões">
 
 
 

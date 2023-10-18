@@ -35,10 +35,14 @@
 
 
 ### Pseudo-classe (São seletores em CSS que permitem estilizar elementos com base em estados ou características específicas)
-    :hover:             -> Acionada quando o usuário passa o mouse por cima do elemento. É frequentemente usada para criar efeitos de destaque ou interatividade.
-    :active:            -> Acionada quando o usuário clica ou toca um elemento. É comumente usada para fornecer feedback de clique.
+    ## Estilizar referente a estado
+        :hover:             -> Acionada quando o usuário passa o mouse por cima do elemento. É frequentemente usada para criar efeitos de destaque ou interatividade.
+        :active:            -> Acionada quando o usuário clica ou toca um elemento. É comumente usada para fornecer feedback de clique.
+    ## Estilizar referente a características
+        :visited            -> Seleciona os links que já foram visitados anteriormente (que normalmente ficam de cor diferente dos links não visitados pelo usuario)
 
-
+### Pseudo-elementos (Altera o conteúdo de um ou mais elementos especificados)
+    ::after         -> Adiciona algo no fim de determinado elemento
 
 ### Medidas
     ## Medidas absolutas -> (Medidas absolutas são fixas e podem variar de dispositivo para dispositivo, não se ajustando automaticamente às preferências do usuário ou ao tamanho da tela.)
@@ -60,16 +64,9 @@
 
 
 ### Atributos
-    ## Atributos de texto
-        # font-size             -> Define o tamanho da fonte, em medidas absolutas ou relativas
-        # font-family           -> Define uma fonte, ou a categoria de fontes que será utilizada, recomenda-se especificar mais de uma, pois caso a primeira não esteja disponível, a próxima será utilizada.
-        # font-weight           -> Define o peso da fonte, dependendo da disponibilidade da familia da fonte, normalmente (lighter, normal, bold, bolder)
-        # font-style            -> Define um dos estilos da fonte, dependendo da disponibilidade, normalmente (underline)
-
-        # text-decoration       -> Personaliza decorações do texto como sublinhado (underline)
-
-        # Shorthand (Abreviação de atributos para personalização de fontes)
-            # font: <font-style> <font-weight> <font-size> <font-family>            Exp: font: italic bolder 3em 'Work Sans', sans-serif
+    ## Atributos de tamanho
+        # height            -> Define a altura de um elemento, geralmente especificada em unidades como "px," "%" ou "em."
+        # width:            -> Define a largura de um elemento, também em unidades como "px," "%" ou "em."
 
     ## Atributos de posições
         # padding           -> Especifica o espaço interno entre o conteúdo de um elemento e sua borda.
@@ -78,6 +75,17 @@
     ## Atributos de posições para texto
         # text-align            -> Atributo para alinhamento do texto, a esquerda, ao centro ou a direita, usando os respectivos atributos (left, center, right)
         # text-indent           -> Adiciona uma indentação/margem de parágrafo, no começo do texto, de tamanho especificado.           Exp: text-indent: 10px;
+
+    ## Atributos de texto
+        # font-size             -> Define o tamanho da fonte, em medidas absolutas ou relativas
+        # font-family           -> Define uma fonte, ou a categoria de fontes que será utilizada, recomenda-se especificar mais de uma, pois caso a primeira não esteja disponível, a próxima será utilizada.
+        # font-weight           -> Define o peso da fonte, dependendo da disponibilidade da familia da fonte, normalmente (lighter, normal, bold, bolder)
+        # font-style            -> Define um dos estilos da fonte, dependendo da disponibilidade, normalmente (underline)
+
+        # text-decoration       -> Personaliza se o texto é sublinhado ou não (none, underline)
+
+        # Shorthand (Abreviação de atributos para personalização de fontes)
+            # font: <font-style> <font-weight> <font-size> <font-family>            Exp: font: italic bolder 3em 'Work Sans', sans-serif
 
     ## Atributos relacionados a fundo
         # background-color              -> Define a cor de fundo de um elemento.
@@ -90,9 +98,8 @@
 
         # background-attachment         -> Controla o comportamento do rolamento da imagem de fundo, com opções como "scroll" e "fixed."
 
-    ## Atributos de tamanho
-        # height            -> Define a altura de um elemento, geralmente especificada em unidades como "px," "%" ou "em."
-        # width:            -> Define a largura de um elemento, também em unidades como "px," "%" ou "em."
+    ## Atributos de manipulação de elementos
+        # content:          -> Define o conteúdo de algo, pode ser utilizado para adicionar um paragrafo a um pseudo-elemento
 
 
 
