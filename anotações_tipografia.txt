@@ -63,3 +63,5 @@ Safe combination:
  *Dica: Após "font-family:", ao clicar Ctrl + Espaço, o VS Code sugere as principais safe combinations.
 
  https://www.w3schools.com/cssref/css_websafe_fonts.php
+
+ fonts ninja extensão que verifica nome de fonte

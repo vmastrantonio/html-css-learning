@@ -3,6 +3,9 @@
 ### Regras CSS
     ## @charset "UTF-8";        -> Define o padrão de codificação para UTF-8, para evitar problemas de acentuação.
 
+formas de centralizar texto:
+    text-align (left, center, right)
+    text-indent (medida)
 
 ### CSS podem ser aplicadas de 3 formas inline, interno, externo. Nessa ordem de precedência.
     ## inline            -> Adiciona uma estilização para uma única tag, diretamente no html.        Exp: <h1 style="color: white;></h1>
