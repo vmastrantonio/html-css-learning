@@ -34,6 +34,7 @@
         # Combinadores:                     -> Combinadores, como o seletor > (child combinator), permitem selecionar elementos com base em sua relação hierárquica com outros elementos. Por exemplo, div > p selecionará todos os parágrafos que são filhos diretos de um elemento div.
 
 
+
 ### Pseudo-classe (São seletores em CSS que permitem estilizar elementos com base em estados ou características específicas)
     ## Estilizar referente a estado
         :hover:             -> Acionada quando o usuário passa o mouse por cima do elemento. É frequentemente usada para criar efeitos de destaque ou interatividade.
@@ -43,6 +44,8 @@
 
 ### Pseudo-elementos (Altera o conteúdo de um ou mais elementos especificados)
     ::after         -> Adiciona algo no fim de determinado elemento
+
+
 
 ### Medidas
     ## Medidas absolutas -> (Medidas absolutas são fixas e podem variar de dispositivo para dispositivo, não se ajustando automaticamente às preferências do usuário ou ao tamanho da tela.)
@@ -68,13 +71,16 @@
         # height            -> Define a altura de um elemento, geralmente especificada em unidades como "px," "%" ou "em."
         # width:            -> Define a largura de um elemento, também em unidades como "px," "%" ou "em."
 
+
     ## Atributos de posições
         # padding           -> Especifica o espaço interno entre o conteúdo de um elemento e sua borda.
         # margin            -> Define o espaço externo entre um elemento e os elementos ao seu redor, afetando o layout.
 
+
     ## Atributos de posições para texto
         # text-align            -> Atributo para alinhamento do texto, a esquerda, ao centro ou a direita, usando os respectivos atributos (left, center, right)
         # text-indent           -> Adiciona uma indentação/margem de parágrafo, no começo do texto, de tamanho especificado.           Exp: text-indent: 10px;
+
 
     ## Atributos de texto
         # font-size             -> Define o tamanho da fonte, em medidas absolutas ou relativas
@@ -84,8 +90,9 @@
 
         # text-decoration       -> Personaliza se o texto é sublinhado ou não (none, underline)
 
-        # Shorthand (Abreviação de atributos para personalização de fontes)
+        # Shorthand (Abreviação de atributos)
             # font: <font-style> <font-weight> <font-size> <font-family>            Exp: font: italic bolder 3em 'Work Sans', sans-serif
+
 
     ## Atributos relacionados a fundo
         # background-color              -> Define a cor de fundo de um elemento.
@@ -98,11 +105,41 @@
 
         # background-attachment         -> Controla o comportamento do rolamento da imagem de fundo, com opções como "scroll" e "fixed."
 
+
+    ## Atributos relacionados a sombra, borda e contorno
+        ## Criar sombra em caixa
+            # Shorthand (box-shadow)
+                # box-shadow <deslocamento-horizontal> <deslocamento-vertical> <espalhamento> <cor>         -> Define uma sombra para um elemento           Exp: box-shadow: 1px 1px 1px black;
+
+        ## Criar borda e outline
+            # border-width / outline-width          -> Define a grossura da borda/contorno
+            # border-style / outline-style          -> Define o estilo de traçado da borda/contorno
+                - solid, dashed, dotted, groove
+            # border-color / outline-color          -> Define a cor da borda/contorno
+
+            # Shorthand (border/outline)
+                border: <border-width> <border-style> <border-color>            Exp: border: 10px solid black;
+                outline: <outline-width> <outline-style> <outline-color>            Exp: outline: 10px solid black;
+
+        ## Criar borda personalizada através de imagem
+            # border-image-source: url();       -> Caminho da imagem da borda personalizada (Lembrando que mesmo com a borda personalizada, é necessário que exista a propriedade border também, mesmo que "transparent")
+            # border-image-repeat:              -> Estilo da divisão da imagem da borda
+                - repeat, stretch
+            # border-image-slice:               -> Corte da imagem para ajustar a borda, é recomendado definição através do devtools
+
+            # Shorthand (border-image)
+                # border-image: <border-image-source> <border-image-slice> <border-image-repeat>            Exp: border-image-source: url('border.png') 27 repeat
+
+        ## Arredondar borda
+            # border-top-left-radius                -> Borda do canto superior esquerdo
+            # border-top-right-radius               -> Borda do canto superior direito
+            # border-bottom-right-radius            -> Borda do canto inferior direito
+            # border-bottom-left-radius             -> Borda do canto inferior esquerdo
+
+            # Shorthand (border-radius)
+                # border-radius / outline-radius        -> Define um arredondamento em graus para a borda de alguma coisa
+
+
+
     ## Atributos de manipulação de elementos
         # content:          -> Define o conteúdo de algo, pode ser utilizado para adicionar um paragrafo a um pseudo-elemento
-
-
-
- ### Padrões
-    ## Texto
-        - Por padrão, o tamanho de fonte de um parágrafo é de 16px, que é o mesmo que 1em.

@@ -6,10 +6,20 @@
 ### Modelo de Caixa (Cada elemento visível em um site é encapsulado em uma caixa)
     ## height (Altura)                  -> Define a dimensão vertical da caixa.
     ## width (Largura)                  -> Define a dimensão horizontal da caixa.
-    ## border (Borda)                   -> Cria um contorno dentro da caixa.
-    ## outline (Contorno)               -> Cria um contorno ao redor da caixa.
-    ## padding (Preenchimento)          -> Ajusta a distância entre o conteúdo da caixa e a borda interna.
-    ## margin (Margem)                  -> Controla o espaço em torno da caixa, além do preenchimento.
+
+    ## padding (Preenchimento)          -> Espaço entre a caixa (box), do elemento e a borda do elemento
+        # padding-top / padding-left / padding-bottom / padding-right       -> Define o preenchimento de cada lado do padding
+        - Shorthand (Abreviação de atributos)
+            padding: <padding-top> <padding-left> <padding-bottom> <padding-right>          Exp: padding: 10px 10px 10px 10px; | OU | padding: 10px;
+
+    ## border (Borda)                   -> Cria uma borda ao redor do padding.
+    ## outline (Contorno)               -> Cria um contorno ao redor da borda que consome espaço da margem.
+
+    ## margin (Margem)                  -> Define a margem que separa o elemento de outros elementos.
+        # margin: auto;         -> Centraliza o elemento no meio da box.
+        # margin-top / margin-left / margin-bottom / margin-right       -> Define o preenchimento de cada lado do margin
+        - Shorthand (Abreviação de atributos)
+            margin: <margin-top> <margin-left> <margin-bottom> <margin-right>          Exp: margin: 10px 10px 10px 10px; | OU | margin: 10px;
 
     ## Tipos de caixa
         # Nível de Bloco (box-level): Elementos que ocupam a largura total da tela. Exemplos incluem:
@@ -37,10 +47,18 @@
         <link rel="stylesheet" href="style.css">                                    -> Define a folha de estilização da página (CSS)
         <style>                                                                     -> Define uma área para adicionar estilos CSS diretamente no arquivo HTML.
 
+    ## Tags semânticas  (São semelhantes a divs, porém tem utilizações especificas para melhor organização semântica)
+        <header>            -> Define o conteúdo do cabeçalho do site
+        <main>              -> Define o conteúdo principal
+        <footer>            -> Define o rodapé do site
+        <section>           -> Define uma seção para o site
+        <article>           -> Define um conteúdo para o site
+        <aside>             -> Conteúdo periférico ao artigo
+
     ## Tags BODY (Definea a área de conteúdo visível em uma página da web. Incluindo texto, imagens, links e outros elementos visuais)
         # Elementos de Texto:
-            <h1>, <h2>, <h3>, <h4>         -> Títulos de diferentes níveis.
-            <p>                            -> Parágrafos de texto.
+            <h1> - <h6>         -> Títulos de diferentes níveis.
+            <p>                 -> Parágrafos de texto.
 
         # Elementos de formatação de texto:
             <em>                -> Usado para destacar texto com ênfase.

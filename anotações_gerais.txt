@@ -1,0 +1,6 @@
+﻿## DevTools
+    - user agent          -> Ao inspecionar elemento de uma página sem customização CSS, o chrome informa as configurações de CSS do navegador como "user agent"
+    - É possivel criar um box-shadow visualizando-o ao vivo através do devtools
+
+
+- Por padrão, o tamanho de fonte de um parágrafo é de 16px, que é o mesmo que 1em.
