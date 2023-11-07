@@ -102,8 +102,16 @@
                 - direção: to (right, left, graus)
                 - formato: (circle)
                 - presença: %
-
+        # background-size
+            - cover             -> Estica a imagem para cobrir 100% do tamanho disponível
+            - contain           -> Adiciona a imagem ao background porém sem esticar.
+             
+        # background-position
         # background-attachment         -> Controla o comportamento do rolamento da imagem de fundo, com opções como "scroll" e "fixed."
+
+
+        # Shorthand (background)
+            background: <color> <image> <position> </> <size> <repeat> <attachment>         Exp: background: #000 url('imagem.jpg') center top/cover no-repeat fixed;
 
 
     ## Atributos relacionados a sombra, borda e contorno
