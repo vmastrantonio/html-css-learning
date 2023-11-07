@@ -137,7 +137,37 @@
         <dt>            -> Termo ou título da definição.
         <dd>            -> Definição do termo.
 
+### Tabelas (Tabelas não devem ser utilizadas para estruturar conteúdos, devem ser apenas utilizadas como tabelas.)
+    ## Hierarquia de tabelas
+        # 1º table (Tabela)
+        # 2º table row (Linha de tabela)
+            2.1º caption (titulo da tabela)
+            2.2º table header (Cabeçalho de tabela)
+            2.3º table data (Dado de tabela)
+    ## Tags para tabelas
+        # <caption></caption>       -> Define um título para a tabela
+        # <thead></thead>           -> Define o cabeçalho da tabela
+        # <tbody></tbody>           -> Define o corpo da tabela
+        # <tfoot></tfoot>           -> Define o rodapé da tabela
+        # <table></table>           -> Delimita a área de uma tabela.
+        # <tr></tr>                 -> Cria uma linha na tabela
+        # <th></th>                 -> Cria um cabeçalho em uma linha de tabela
+        # <td></td>                 -> Cria um dado em uma linha de tabela
 
+    ## Escopo de tabelas
+        # <th scope="col">          -> Define que o escopo desse th é a coluna ao lado dele
+        # <th scope="colgroup">     -> Define que o escopo desse th é o grupo de colunas ao lado dele
+        # <th scope="row">          -> Define que o escopo desse th é a linha abaixo dele
+        # <th scope="rowgroup">     -> Define que o escopo desse th é o grupo de linhas abaixo dele
+
+    ## Mesclagem de células
+        # <td colspan="2">          -> Define que esse TD irá ocupar 2 colunas
+        # <td rowspan="3">          -> Define que esse TD irá ocupar 3 linhas
+
+    ## Dicas
+        # Podemos utilizar text-align para alinhar o conteúdo de um dado de uma tabela horizontalmente e vertical-align para alinhar verticalmente. (vertical-align: middle; em vez de center!)
+        # Para agrupar colunas, utilizamos logo após a definição da tabela a tag <colgroup> </colgroup>, dentro dela adicionamos <col> para cada uma das colunas da tabela, podendo estilizar um grupo de colunas de uma só vez.
+        # Para deixar uma tabela responsiva podemos adiciona-la dentro de uma div e adicionar ao css dessa div a propriedade "overflow-x".
 
 ### Atalhos
     -> Para rodar um código utilizar F5 que abre o navegador automaticamente.

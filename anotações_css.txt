@@ -147,7 +147,8 @@
             # Shorthand (border-radius)
                 # border-radius / outline-radius        -> Define um arredondamento em graus para a borda de alguma coisa
 
-
+        ## Separar ou sobrepor bordas
+            # border-collapse               -> Por padrão a borda é "separate" mas pode-se utilizar "collapse" para sobrepor bordas
 
     ## Atributos de manipulação de elementos
         # content:          -> Define o conteúdo de algo, pode ser utilizado para adicionar um paragrafo a um pseudo-elemento
