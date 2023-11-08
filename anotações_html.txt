@@ -1,176 +1,251 @@
-﻿### Significado do HTML
-    -> HTML (HyperText Markup Language) é uma linguagem de marcação de hipertexto usada para criar e estruturar o conteúdo de páginas da web. Ele define elementos que representam diferentes tipos de conteúdo, como textos, imagens, links e multimídia, e fornece a estrutura e a semântica necessárias para a apresentação e interpretação do conteúdo em navegadores da web. O HTML é a base da maioria das páginas da web e permite aos desenvolvedores criar páginas interativas e acessíveis.
+﻿Significado do HTML
+    HTML (HyperText Markup Language) é uma linguagem de marcação de hipertexto usada para criar e estruturar o conteúdo de páginas da web. Ele define elementos que representam diferentes tipos de conteúdo, como textos, imagens, links e multimídia, e fornece a estrutura e a semântica necessárias para a apresentação e interpretação do conteúdo em navegadores da web. O HTML é a base da maioria das páginas da web e permite aos desenvolvedores criar páginas interativas e acessíveis.
 
+--------------------------------------
 
+Modelo de Caixa 
+    Todos elementos dentro de um site tem sua própria caixa, que define a área que aquele elemento ocupa, que é organizada em diferentes níveis.
 
-### Modelo de Caixa (Cada elemento visível em um site é encapsulado em uma caixa)
-    ## height (Altura)                  -> Define a dimensão vertical da caixa.
-    ## width (Largura)                  -> Define a dimensão horizontal da caixa.
+    Nível de Bloco (block-level): Elementos que ocupam a largura total disponível.
+        <div>             -> Usado para agrupar conteúdo em um bloco.
+        <h1>-<h6>, <p>, <main>, <header>, <nav>, <article>, <aside>, <footer>, <form>, <video>    -> Elementos que representam seções ou estruturas de nível de bloco em uma página web.
 
-    ## padding (Preenchimento)          -> Espaço entre a caixa (box), do elemento e a borda do elemento
-        # padding-top / padding-left / padding-bottom / padding-right       -> Define o preenchimento de cada lado do padding
-        - Shorthand (Abreviação de atributos)
-            padding: <padding-top> <padding-left> <padding-bottom> <padding-right>          Exp: padding: 10px 10px 10px 10px; | OU | padding: 10px;
+    Nível Inline (inline-level): Elementos que ocupam apenas a largura especificada.
+        <span>            -> Usado para aplicar estilos a partes específicas ou conteúdo em linha.
+        <a>, <code>, <small>, <strong>, <em>, <sup>-<sub>, <label>, <button>, <input>, <select>   -> Elementos que representam conteúdo em linha, como links, texto em destaque e campos de entrada.
 
-    ## border (Borda)                   -> Cria uma borda ao redor do padding.
-    ## outline (Contorno)               -> Cria um contorno ao redor da borda que consome espaço da margem.
+--------------------------------------
 
-    ## margin (Margem)                  -> Define a margem que separa o elemento de outros elementos.
-        # margin: auto;         -> Centraliza o elemento no meio da box.
-        # margin-top / margin-left / margin-bottom / margin-right       -> Define o preenchimento de cada lado do margin
-        - Shorthand (Abreviação de atributos)
-            margin: <margin-top> <margin-left> <margin-bottom> <margin-right>          Exp: margin: 10px 10px 10px 10px; | OU | margin: 10px;
+Identificadores
+    Os identificadores são atributos que podem ser definidos a quaisquer elementos do body para diferenciar o elemento e possibilitar sua manipulação e personalização.
 
-    ## Tipos de caixa
-        # Nível de Bloco (box-level): Elementos que ocupam a largura total da tela. Exemplos incluem:
-            - <div>             -> Usado para agrupar conteúdo em um bloco.
-            - <h1>-<h6>, <p>, <main>, <header>, <nav>, <article>, <aside>, <footer>, <form>, <video>    -> Elementos que representam seções ou estruturas de nível de bloco em uma página web.
+    ID (Nome de identificação único definido a um único elemento)
+        - <div id="div-principal">          -> No CSS acessamos o elemento através de          -> Exemplo de CSS: divdiv-principal {}
 
-        # Nível Inline (inline-level): Elementos que ocupam apenas a largura especificada. Exemplos incluem:
-            - <span>            -> Usado para aplicar estilos a partes específicas ou conteúdo em linha.
-            - <a>, <code>, <small>, <strong>, <em>, <sup>-<sub>, <label>, <button>, <input>, <select>   -> Elementos que representam conteúdo em linha, como links, texto em destaque e campos de entrada.
+    Classe (Nome de identificação de uma classe a ser personalizada, uma mesma classe pode ser atribuida a inumeros elementos.)
+        - <h1 class="texto-principal">          -> No CSS acessamos o elemento através de .         -> Exemplo de CSS: .texto-principal {}
+        - <h2 class="texto-principal">
 
+--------------------------------------
 
+Tags
 
-### Tags
-    ## Tags PADRÃO
+    Tags PADRÃO
         <!DOCTYPE html>         -> Indica a versão do HTML usada no código (por padrão, HTML5).
         <html>                  -> Define a área de conteúdo HTML
         <!-- --!>               -> Define uma área para fazer comentários sobre o código
 
-    ## Tags HEAD (Define a seção de metadados do documento, incluindo informações sobre a página, tais como título, codificação de caracteres, e conexões com arquivos CSS ou ícones.)
-        <meta charset="UTF-8">                                                      -> Define a codificação de caracteres a ser utilizada pelo site, permitindo a exibição correta de caracteres e acentuação.
-        <meta name="viewport" content="...">                                        -> Informa ao navegador que o conteúdo do <body> utilizará 100% do espaço disponível.
-        <meta name="description">                                                   -> Define uma descrição da página para os mecanismos de busca
-        <title>                                                                     -> Define o título da página exibido na barra de título do navegador.
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">           -> Define o favicom da página
-        <link rel="stylesheet" href="style.css">                                    -> Define a folha de estilização da página (CSS)
-        <style>                                                                     -> Define uma área para adicionar estilos CSS diretamente no arquivo HTML.
+    Tags HEAD
+        As tags head devem obrigatoriamente ficar dentro da área <head> </head> e são responsáveis pelas configurações da interface.
 
-    ## Tags semânticas  (São semelhantes a divs, porém tem utilizações especificas para melhor organização semântica)
-        <header>            -> Define o conteúdo do cabeçalho do site
-        <main>              -> Define o conteúdo principal
-        <footer>            -> Define o rodapé do site
-        <section>           -> Define uma seção para o site
-        <article>           -> Define um conteúdo para o site
-        <aside>             -> Conteúdo periférico ao artigo
+        Tags de metadados e configurações
+            <meta charset="UTF-8">                                                      -> Define a codificação de caracteres a ser utilizada pelo site, permitindo a exibição correta de caracteres e acentuação.
+            <meta name="viewport" content="...">                                        -> Informa ao navegador que o conteúdo do <body> utilizará 100% do espaço disponível.
+            <meta name="description">                                                   -> Define uma descrição da página que é exibida nos resultados dos mecanismos de busca, ajudando os usuários a entender do que se trata a página.
 
-    ## Tags BODY (Definea a área de conteúdo visível em uma página da web. Incluindo texto, imagens, links e outros elementos visuais)
-        # Elementos de Texto:
-            <h1> - <h6>         -> Títulos de diferentes níveis.
-            <p>                 -> Parágrafos de texto.
+        Tags de personalização do site
+            <title></title>                                                             -> Define o título da página exibido na barra de título do navegador.
+            <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">           -> Define o favicom da página
+            <link rel="stylesheet" href="style.css">                                    -> Define a folha de estilização da página (CSS)
+            <style></style>                                                             -> Define uma área para adicionar estilos CSS diretamente no arquivo HTML.
 
-        # Elementos de formatação de texto:
-            <em>                -> Usado para destacar texto com ênfase.
-            <address>           -> Informações de endereço.
-            <strong>            -> Usado para denotar um texto de grande importância
-            <cite>              -> Indica que o texto é uma referência ou citação de outra fonte
-            <abbr>              -> Define uma abreviação e fornece um texto explicativo quando o usuário passa o mouse sobre
-            <time>              -> Usado para representar datas e horas em um formato específico
-            <code>              -> Define texto com fonte monoespaçada.
-            <pre>               -> Pré-formatação de texto.
+    Tags BODY 
+        As tags body devem obrigatoriamente ficar dentro da área <body> </body> e são responsáveis pelo conteúdo visível da interface.
 
-        # Elementos de Mídia:
-            <img>                   -> Insere imagens.
-            <audio>                 -> Reproduzir áudio com opções como preload, muted, autoplay, controls e loop.
+        Tags de conteúdo  (Servem para classificar o conteúdo do site, para uma melhor organização e disposição, além de melhor entendimento por mecanismos de busca)
+            <header> </header>            -> Define o conteúdo do cabeçalho do site
+            <main> </main>                -> Define o conteúdo principal
+            <section> </section>          -> Define uma seção para o site
+            <article> </article>          -> Define um conteúdo para o site
+            <aside> </aside>              -> Conteúdo periférico ao artigo
+            <footer> </footer>            -> Define o rodapé do site
 
-        # Outros Elementos:
-            <br>                -> Quebra de linha.
-            <a href="">         -> Cria links âncora.
+        Elementos de Texto:
+            <h1> ~~ <h6>                    -> Títulos de diferentes níveis.
+            <p>                             -> Parágrafos de texto.
 
+        Elementos de formatação de texto:
+            <a href=""> </a>		        -> Adiciona uma âncora para algum conteúdo.
+            <em> </em>                    	-> Usado para destacar texto com ênfase.
+            <address> </adress>           	-> Informações de endereço.
+            <strong> </strong>            	-> Usado para denotar um texto de grande importância
+            <cite> </cite>                	-> Indica que o texto é uma referência ou citação de outra fonte
+            <abbr> </abbr>                	-> Define uma abreviação e fornece um texto explicativo quando o usuário passa o mouse sobre
+            <time> </time>                	-> Usado para representar datas e horas em um formato específico
+            <code> </code>                	-> Define texto com fonte monoespaçada.
+            <pre> </pre>                  	-> Pré-formatação de texto.
+            <br>			      	        -> Quebra linha.
 
+--------------------------------------
 
-### Atributos comuns
-    ## ID's e classes
-        # ID (Nome de identificação único definido a um único elemento)
-            - <div id="div-principal">          -> No CSS acessamos o elemento através de #         -> Exemplo de CSS: div#div-principal {}
+Multimidia
 
-        # Classe (Nome de identificação de uma classe a ser personalizada, mais de um elemento pode receber a mesma classe)
-            - <h1 class="texto-principal">          -> No CSS acessamos o elemento através de .         -> Exemplo de CSS: .texto-principal {}
-            - <h2 class="texto-principal">
+    Imagens
+        Inserção de imagens
+            <img src="">                -> Insere imagens.
 
-    ## Conexões entre arquivos
-        # src           -> O atributo src é comumente usado em elementos de mídia, como <img> e <audio>, para especificar o caminho do arquivo de origem.           -> Exp: <img src="imagem.jpg">
-        # href          -> O atributo href é usado em elementos de âncora (<a>) para definir o URL de destino do link.                                              -> Exp: <a href="https://www.exemplo.com">Aqui</a>
+        Atributos
+            alt=""                      -> É fundamental a utilização do atributo alt em todas imagens, ele serve para fazer uma descrição textual do conteúdo da imagem para questão de acessibilidade, principalmente para deficientes visuais.
 
-    ## Acessibilidade
-        # alt           -> O atributo alt é usado em elementos de imagem (<img>) para fornecer uma descrição alternativa da imagem.         -> Exp: <img src="foto.jpg" alt="Família se divertindo em um parque de diversões">
+        Formatos e otimização
+            Imagens Locais (Imagens locais precisam ser baixadas pelos clientes e consomem banda do servidor)
+                - Use formatos como PNG e JPG.
 
+            Imagens Remotas (Imagens remotas não consomem banda do servidor porém não podemos garantir a disponibilidade da imagem)
+                - Referencie imagens hospedadas em servidores externos.
 
+    Videos
+        Inserção de vídeo
+            <video> </video>            -> Define uma área para inserção de um vídeo, dentro dessa área, podem ser adicionados diferentes sources, pois se o primeiro não carregar para o usuário, o próximo será carregado, podemos adicionar uma mensagem na ultima linha, que caso o vídeo não possa ser carregado, ela será mostrada ao usuário.
 
-### Multimídia
-    ## Dicas
-        - Atributo alt para Imagens: Todos os elementos de imagem <img> devem incluir o atributo alt, que fornece uma descrição alternativa para a imagem. Isso é essencial para acessibilidade e ajuda os usuários com deficiência visual a compreender o conteúdo da imagem.
+            <source src="" type="">     -> Define o caminho e o formato do arquivo respectivamente
+                - video/mp4         -> Define que o formato do arquivo é .mp4
+                - video/webm        -> Define que o formato do arquivo é .webm
+                - video/ogg         -> Define que o formato do arquivo é .ogg
+
+        Atributos
+            control                     -> Adiciona os botões de controle do vídeo (retroceder, reproduzir, pausar, avançar)
+            autoplay                    -> Define se o vídeo irá inicar automaticamente quando a página for carregada
+            loop                        -> Faz com que o vídeo reinicie automaticamente após o termino.
+            muted                       -> Define se o vídeo deve ser mudo.
+            poster=""                   -> Define uma imagem para para ser mostrada até que o vídeo seja carregado pelo usuário
+            preload=""                  -> Define se o áudio sera carregado automaticamente quando a página é carregada
+                - auto          -> Carrega o áudio inteiro ao abrir a página
+                - metadata      -> Carrega apenas os metadados do áudio ao abrir a página
+                - none          -> Não carrega nenhuma informação do áudio ao abrir a página
+
+        Formatos e otimização
+            Vídeos Locais (Vídeos locais precisam ser baixadas pelos clientes e consomem banda do servidor)
+                - Aceitam formatos como MP4, WEBM, MKV e WAV.
+
+            Vídeos Remotos (Vídeos remotos não consomem banda do servidor porém não podemos garantir a disponibilidade do vídeo)
+                - Utilize serviços como YouTube (gratuito, menos qualidade e mais rápido) ou Vimeo (pago, mais qualidade e maior customização).
+
+   Audios
+        Inserção de áudio
+            <audio> </audio>            -> Define uma área para inserção de um áudio, dentro dessa área, podem ser adicionados diferentes sources, pois se o primeiro não carregar para o usuário, o próximo será carregado, podemos adicionar uma mensagem na ultima linha, que caso o áudio não possa ser carregado, ela será mostrada ao usuário.
+
+            <source src="" type="">     -> Define o caminho e o formato do arquivo respectivamente
+                - audio/mpeg        -> Define que o formato do arquivo é .mp3
+                - audio/ogg        -> Define que o formato do arquivo é .ogg
+                - audio/wav        -> Define que o formato do arquivo é .wav
+
+        Atributos
+            control                     -> Adiciona os botões de controle do áudio (retroceder, reproduzir, pausar, avançar)
+            autoplay                    -> Define se o áudio irá inicar automaticamente quando a página for carregada
+            muted                       -> Define se o áudio deve ser mudo.
+            loop                        -> Faz com que o áudio reinicie automaticamente após o termino.
+            preload=""                  -> Define se o áudio sera carregado automaticamente quando a página é carregada
+                - auto          -> Carrega o áudio inteiro ao abrir a página
+                - metadata      -> Carrega apenas os metadados do áudio ao abrir a página
+                - none          -> Não carrega nenhuma informação do áudio ao abrir a página
+
+        Formatos
+            Formatos aceitos incluem MP3, OGG e WAV.
+
+    Dicas gerais de multimidia
         - Tamanho de Mídias: O tamanho das mídias, como imagens, vídeos e áudios, é crucial. Imagens pesadas podem resultar em tempos de carregamento mais longos, afetando a experiência do usuário. Sempre otimize as imagens para a web.
         - Midias Locais vs. Remotas: Midias locais precisam ser baixadas pelos clientes e consomem largura de banda do servidor. Midias remotas não consomem largura de banda do servidor, mas a disponibilidade pode não ser garantida.
-        - Formato de Vídeo: Para vídeos locais, use formatos como MP4, WEBM e MKV para garantir a compatibilidade com diversos navegadores. Evite arquivos WAV devido ao seu tamanho.
-        - Vídeos Remotos: Ao usar vídeos remotos, considere serviços como o YouTube (gratuito, mais rápido, mas menor qualidade) ou o Vimeo (pago, maior qualidade e personalização).    
 
-    ## Imagens
-        # Imagens Locais (Imagens locais precisam ser baixadas pelos clientes e consomem banda do servidor)
-            - Use formatos como PNG e JPG.
+--------------------------------------
 
-        # Imagens Remotas (Imagens remotas não consomem banda do servidor porém não podemos garantir a disponibilidade da imagem)
-            - Referencie imagens hospedadas em servidores externos.
+Caracteres especiais
+    Alguns caracteres como <> são utilizados pelo html e para serem exibidos necessitam a inserção via códigos personalizados.
 
-    ## Vídeos
-        # Vídeos Locais (Vídeos locais precisam ser baixadas pelos clientes e consomem banda do servidor)
-            - Aceitam formatos como MP4, WEBM, MKV e WAV.
+    Caracter / Código
+        <         -> &lt;
+        <         -> &gt;
+        ®️         -> &reg;
+        ©️         -> &copy;
+        ™️         -> &trade; 
+        €         -> &euro;
+        £         -> &pound;
+        ¥         -> &yen;
+        ¢         -> &cent;
+        δ         -> &delta;
+        Δ         -> &Delta;
+        EMOJIS    -> &#x >> 1F596 <<;
 
-        # Vídeos Remotos (Vídeos remotos não consomem banda do servidor porém não podemos garantir a disponibilidade do vídeo)
-            - Utilize serviços como YouTube (gratuito, menos qualidade e mais rápido) ou Vimeo (pago, mais qualidade e maior customização).
+--------------------------------------
 
-    ## Áudios
-        Formatos aceitos incluem MP3, OGG e WAV.
+Listas
 
+    Listas Ordenadas (A ordem dos elementos influencia no sentido da lista)
+        Declaração e hierarquia
+            <ol> </ol>			-> Define a área de uma lista ordenada
+            <li> </li>			-> Utilizado dentro da área da lista, cria um item para a lista.
 
+        Atributos
+            type=""				-> Define a sequência de caracteres a ser seguida para ordenação da lista. 
+                Possiveis types: 1, A, a, I, i
 
-### Listas (Itens para listas ordenadas e não ordenadas são definidos por <li> </li>)
-    ## Listas Ordenadas (ordem dos elementos importa)
-        <ol type="">            -> Cria listas ordenadas com tipos como 1, A, a, I, i.
+    Listas Não Ordenadas (A ordem dos elementos não influencia no sentido da lista)
+        Declaração e hierarquia
+            <ul> </ul>			-> Define a área de uma lista não ordenada
+            <li> </li>			-> Utilizado dentro da área da lista, cria um item para a lista.
 
-    ## Listas Não Ordenadas (ordem dos elementos não importa)
-        <ul type="">            -> Cria listas não ordenadas com tipos como disc, circle e square.
+        Atributos
+            type=""            		-> Define o caractere representativo de cada item da lista. Possiveis types: disc, circle e square.
 
-    ## Listas de Definição (Listas para atribuir uma coisa a outra)
-        <dl>            -> Lista de definição.
-        <dt>            -> Termo ou título da definição.
-        <dd>            -> Definição do termo.
+    Listas de Definição (Listas para atribuir um título, ou termo a um conteúdo ou dado (dt = dd))
+        Declaração e hierarquia
+            <dl>            -> Define a área de uma lista de definição.
+            <dt>            -> Utilizado dentro da área da lista, cria um título ou termo para a lista.
+            <dd>            -> ?????????? pesquisar ???????????????
 
-### Tabelas (Tabelas não devem ser utilizadas para estruturar conteúdos, devem ser apenas utilizadas como tabelas.)
-    ## Hierarquia de tabelas
-        # 1º table (Tabela)
-        # 2º table row (Linha de tabela)
-            2.1º caption (titulo da tabela)
-            2.2º table header (Cabeçalho de tabela)
-            2.3º table data (Dado de tabela)
-    ## Tags para tabelas
-        # <caption></caption>       -> Define um título para a tabela
-        # <thead></thead>           -> Define o cabeçalho da tabela
-        # <tbody></tbody>           -> Define o corpo da tabela
-        # <tfoot></tfoot>           -> Define o rodapé da tabela
-        # <table></table>           -> Delimita a área de uma tabela.
-        # <tr></tr>                 -> Cria uma linha na tabela
-        # <th></th>                 -> Cria um cabeçalho em uma linha de tabela
-        # <td></td>                 -> Cria um dado em uma linha de tabela
+--------------------------------------
 
-    ## Escopo de tabelas
-        # <th scope="col">          -> Define que o escopo desse th é a coluna ao lado dele
-        # <th scope="colgroup">     -> Define que o escopo desse th é o grupo de colunas ao lado dele
-        # <th scope="row">          -> Define que o escopo desse th é a linha abaixo dele
-        # <th scope="rowgroup">     -> Define que o escopo desse th é o grupo de linhas abaixo dele
+Tabelas
 
-    ## Mesclagem de células
-        # <td colspan="2">          -> Define que esse TD irá ocupar 2 colunas
-        # <td rowspan="3">          -> Define que esse TD irá ocupar 3 linhas
+    Declaração e hierarquia
+        <table> </table>		    -> Define a área de uma tabela.
 
-    ## Dicas
-        # Podemos utilizar text-align para alinhar o conteúdo de um dado de uma tabela horizontalmente e vertical-align para alinhar verticalmente. (vertical-align: middle; em vez de center!)
-        # Para agrupar colunas, utilizamos logo após a definição da tabela a tag <colgroup> </colgroup>, dentro dela adicionamos <col> para cada uma das colunas da tabela, podendo estilizar um grupo de colunas de uma só vez.
-        # Para deixar uma tabela responsiva podemos adiciona-la dentro de uma div e adicionar ao css dessa div a propriedade "overflow-x".
+        <colgroup> </colgroup>      -> Opcional, define uma área para definição de grupos de colunas da tabela.
+        <col>                       -> Utilizado dentro da área do colgroup, faz uma atribuição a cada coluna da tabela respectivamente, para manipulação da coluna por inteiro.
 
-### Atalhos
-    -> Para rodar um código utilizar F5 que abre o navegador automaticamente.
-    -> Para criar a estrutura padrão do HTML em um documento vazio, insira !.
-    -> No Visual Studio Code, use CTRL + SHIFT + P para acessar o menu de configurações e atalhos.
-    -> Digite lorem100 para gerar um texto lorem com 100 palavras.
+        <caption> </caption>       	-> Utilizado dentro da área da tabela, define um título para a tabela.
+        <thead> </thead>           	-> Utilizado dentro da área da tabela, define a área de cabeçalho de uma tabela.
+        <tbody> </tbody>           	-> Utilizado dentro da área da tabela, define a área do corpo de uma tabela.
+        <tfoot> </tfoot>            -> Utilizado dentro da área da tabela, define a área de rodapé de uma tabela.
+
+        <tr> </tr>            	    -> Utilizado dentro de uma das áreas thead, tbody ou tfoot, cria uma nova linha para a tabela.
+        <th> </th>         	        -> Utilizado dentro de uma linha (tr), define um elemento como cabeçalho da linha.
+        <td> </td>            	    -> Utilizado dentro de uma linha (tr), cria um elemento para uma linha da tabela
+
+    Escopo de tabelas
+        <th scope="col">            -> Define que o escopo desse th é a coluna ao lado dele
+        <th scope="colgroup">       -> Define que o escopo desse th é o grupo de colunas ao lado dele
+
+        <th scope="row">            -> Define que o escopo desse th é a linha abaixo dele
+        <th scope="rowgroup">       -> Define que o escopo desse th é o grupo de linhas abaixo dele
+
+    Mesclagem de células
+        <td colspan="2">            -> Define que esse TD irá ocupar 2 colunas
+        <td rowspan="3">            -> Define que esse TD irá ocupar 3 linhas
+
+    Dicas
+        - Tabelas não devem ser utilizadas para estruturar conteúdos, devem ser apenas utilizadas como tabelas.
+        - Podemos utilizar text-align para alinhar o conteúdo de um dado de uma tabela horizontalmente e vertical-align para alinhar verticalmente. (vertical-align: middle; em vez de center!)
+        - Para agrupar colunas, utilizamos logo após a definição da tabela a tag <colgroup> </colgroup>, dentro dela adicionamos <col> para cada uma das colunas da tabela, podendo estilizar um grupo de colunas de uma só vez.
+        - Para deixar uma tabela responsiva podemos adiciona-la dentro de uma div e adicionar ao css dessa div a propriedade "overflow-x: auto;".
+
+--------------------------------------
+
+Iframe
+
+    Declaração
+        <iframe> </iframe>		    -> Define a área de um iframe.
+
+    Atributos
+        src=""                      -> Define o caminho do conteúdo do iframe, pode ser um link para arquivos externos ou o caminho para arquivos internos.
+        name=""                     -> Define um nome para o iframe, com isso pode atualizar o conteúdo do iframe através de uma ancora externa utilizando target="nome".
+        frameborder=""              -> Define se o iframe possui borda ou não, utilizamos "0" para remover a borda ou "1" para deixar a borda.
+        srcdoc=""                   -> Permite adicionar código html livremente dentro de um iframe.
+        scrolling=""
+            - auto  -> Se o conteúdo do iframe for maior que o tamanho do iframe, adiciona uma barra de rolagem (padrão do iframe)
+            - yes   -> Mesmo que o conteúdo caiba no iframe adiciona barra de rolagem
+            - no    -> Não adiciona barra de rolagem mesmo que não caiba todo conteúdo no iframe.
+
+    Dicas
+        - Por padrão, um iframe possui 300x150 pixels de tamanho.
+        - Podemos adicionar uma mensagem que apareça caso o iframe não consiga ser carregada para o usuário. Basta adicionarmos a mensagem entre as tages <iframe> MENSAGEM </iframe>

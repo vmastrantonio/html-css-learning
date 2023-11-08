@@ -74,8 +74,14 @@
 
     ## Atributos de posições
         # padding           -> Especifica o espaço interno entre o conteúdo de um elemento e sua borda.
+            padding (Preenchimento)          -> Espaço entre a caixa (box), do elemento e a borda do elemento
+            padding-top / padding-left / padding-bottom / padding-right       -> Define o preenchimento de cada lado do padding
+            - Shorthand (Abreviação de atributos)
+            padding: <padding-top> <padding-left> <padding-bottom> <padding-right>          Exp: padding: 10px 10px 10px 10px; | OU | padding: 10px;
         # margin            -> Define o espaço externo entre um elemento e os elementos ao seu redor, afetando o layout.
-
+            margin-top / margin-left / margin-bottom / margin-right       -> Define o preenchimento de cada lado do margin
+            - Shorthand (Abreviação de atributos)
+            margin: <margin-top> <margin-left> <margin-bottom> <margin-right>          Exp: margin: 10px 10px 10px 10px; | OU | margin: 10px;
 
     ## Atributos de posições para texto
         # text-align            -> Atributo para alinhamento do texto, a esquerda, ao centro ou a direita, usando os respectivos atributos (left, center, right)
@@ -98,20 +104,27 @@
         # background-color              -> Define a cor de fundo de um elemento.
         # background-image              -> Permite adicionar uma imagem de fundo a um elemento, incluindo a opção de aplicar gradientes para criar transições suaves entre cores.
             -> linear-gradient(to <DIREÇÃO>, <COR 1> <PRESENÇA>, <COR 2> <PRESENÇA>, <COR 3> <PRESENÇA>, <COR 4> <PRESENÇA>, <COR 5> <PRESENÇA>)
+
             -> radial-gradient(to <FORMATO>, <COR 1> <PRESENÇA>, <COR 2> <PRESENÇA>, <COR 3> <PRESENÇA>, <COR 4> <PRESENÇA>, <COR 5> <PRESENÇA>)
                 - direção: to (right, left, graus)
                 - formato: (circle)
                 - presença: %
-        # background-size
-            - cover             -> Estica a imagem para cobrir 100% do tamanho disponível
-            - contain           -> Adiciona a imagem ao background porém sem esticar.
-             
-        # background-position
-        # background-attachment         -> Controla o comportamento do rolamento da imagem de fundo, com opções como "scroll" e "fixed."
 
+            -> background-position: ;                
+                - background-position: left top;		-> esquerda topo
+                - Background-position: left center;		-> esquerda centro
+                - background-position: right bottom;	-> direita embaixo
+                - background-position: center center;	-> centro centro
 
-        # Shorthand (background)
-            background: <color> <image> <position> </> <size> <repeat> <attachment>         Exp: background: #000 url('imagem.jpg') center top/cover no-repeat fixed;
+            -> background-size: 100px           -> Define o tamanho de cada imagem do background-image
+                - background-size: cover;           -> Cobre a superficie inteira com a imagem, mesmo que precise distorcer um pouco a imagem.
+                - background-size: contain          -> Mostra 100% do tamanho da tela
+
+            -> background-attachment: ;           -> Define o "vínculo" do background, controla o comportamento do rolamento da imagem de fundo.
+
+            # Shorthand
+                - background: <color> <image> <position> </> <size> <repeat> <attachment;           -> Exp: background: #000 url('imagem.jpg') center top/cover no-repeat fixed;
+            -> background-repeat: ;             -> Define se é para a imagem repetir ou não (repeat, no-repeat, repeat-x, repeat-y)
 
 
     ## Atributos relacionados a sombra, borda e contorno
