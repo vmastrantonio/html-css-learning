@@ -242,9 +242,18 @@ Iframe
         frameborder=""              -> Define se o iframe possui borda ou não, utilizamos "0" para remover a borda ou "1" para deixar a borda.
         srcdoc=""                   -> Permite adicionar código html livremente dentro de um iframe.
         scrolling=""
-            - auto  -> Se o conteúdo do iframe for maior que o tamanho do iframe, adiciona uma barra de rolagem (padrão do iframe)
-            - yes   -> Mesmo que o conteúdo caiba no iframe adiciona barra de rolagem
-            - no    -> Não adiciona barra de rolagem mesmo que não caiba todo conteúdo no iframe.
+            - auto              -> Se o conteúdo do iframe for maior que o tamanho do iframe, adiciona uma barra de rolagem (padrão do iframe)
+            - yes               -> Mesmo que o conteúdo caiba no iframe adiciona barra de rolagem
+            - no                -> Não adiciona barra de rolagem mesmo que não caiba todo conteúdo no iframe.
+        sandbox=""                  -> Sandox permite limitar funcionalidades do conteudo de um iframe.
+            - sandbox           -> Mais alta camada de segurança, desabilita todos atributos abaixo.
+            - allow-same-origin -> Permite ao iframe executar apenas o que estiver na mesma origem/pasta do próprio site (o iframe deve ser dentro do site)
+            - allow-forms       -> Permite a utilização e envio de formulários dentro do iframe
+            - allow-scripts     -> Permite a utilização de scripts dentro do iframe
+
+        refeerrerpolicy=""          -> Define se o conteúdo do iframe consegue coletar informações/dados do usuário.
+            - no-referrer-when-downgrade            -> Atributo padrão
+            - no-referrer                           -> Define que o iframe não poderá coletar nenhuma informação do usuário.
 
     Dicas
         - Por padrão, um iframe possui 300x150 pixels de tamanho.
