@@ -260,7 +260,7 @@ Formulário
     Declarações e atributos
         Formulário (form)
             Declarar formulário
-                <form> </form>      -> Define a área de um formulário.
+                <form> </form>          -> Define a área de um formulário.
 
             Atributos de formulário
                 method=""           -> Define o método de envio dos dados do formulário.
@@ -270,6 +270,14 @@ Formulário
                 autocomplete=""     -> Permite alterar se o navegador vai sugerir o preenchimento do formulário
                     - off       -> Desativa as sugestões de preenchimento
 
+            Agrupar campos de formulário
+                <fieldset> </fieldset>  -> Define a área do agrupamento de campos
+
+            Dar nome para o agrupamento
+                <legend> </legend>      -> Define um nome para o agrupamento de campos
+
+
+
         Entrada (input)
             Declarar entrada
                 <input>             -> Define uma área de entrada
@@ -277,14 +285,58 @@ Formulário
             Atributos de entrada
                 name=""             -> Define um nome para a entrada
                 type=""             -> Define o tipo da entrada
-                    - text      -> Define que a entrada será uma caixa de texto
-                    - submit    -> Define
-                requited            -> Define que o campo deve obrigatoriamente ser preenchido
+                    - text      -> Define que a entrada será alfanumérico
+                    - number    -> Define que a entrada será apenas númerica
+                    - month     -> Define um ano e o mês
+                    - date      -> Define um dia, mês e ano
+                    - time      -> Define um horário
+                    - email     -> Define um email
+                    - tel       -> Define um telefone
+                    - checkbox  -> Define um campo de marcação de caixas
+                    - radio     -> Define um campo de escolha de caixa (Elementos precisam possuir o mesmo name)
+                    - color     -> Define o campo como escolha de cor RGB
+                    - range     -> Define uma barra de controle de quantidade
+                    - file      -> Define o envio de algum arquivo (É necessário que o método do formulário seja POST)
+                    - submit    -> Define um botão de envio do formulário
+                    - reset     -> Define um botão para limpar o formulário
+                required            -> Define que o campo deve obrigatoriamente ser preenchido
                 placeholder=""      -> Define o texto descritivo de dentro do label.
                 size=""             -> Define o tamanho da caixa do input com base no número de caracteres.
                 minlenght=""        -> Define o número mínimo de caracteres aceito.
                 maxlenght=""        -> Define o número máximo de caracteres aceito.
-                autocomplete=""        -> O autocomplete de entrada define para o navegador o tipo de informação daquela entrada, para que tenha mais precisão nas sugestões de complete, lembrando que para ser utilizada o autocomplete do formulário deve estar on e que os valores são pré-definidos.
+                max=""              -> Define o número máximo aceito dentro de um input number
+                min=""              -> Define o número mínimo aceito dentro de um input number
+                step=""             -> Define o passo de um input number (Exp: step="0.1" define que o número pode pular de 0.1 em 0.1)
+                value=""            -> Preenche o input com um dado por padrão, porém substitui o placeholder.
+                pattern=""          -> Permite a utilização de RegEx em uma entrada
+                checked             -> Serve para campos radio e checkbox, marca um elemento por padrão.
+                list=""             -> Associa o id de uma lista de dados para uma entrada, dando como sugestão todos items da lista de dados.
+                oninput=""          -> Permite adicionar um código JS que atualiza quando o usuário interage com o input.
+                autocomplete=""     -> O autocomplete de entrada define para o navegador o tipo de informação daquela entrada, para que tenha mais precisão nas sugestões de complete, lembrando que para ser utilizada o autocomplete do formulário deve estar on e que os valores são pré-definidos.
+
+        Selecionáveis (select)
+            Declarar Seleção
+                <select name="" id=""> </select>    -> Define a área de uma seleção dentro de um formulário
+
+            Declarar Categorias de Seleção
+                <optgroup label=""> </optgroup>     -> Utilizado dentro de uma seleção, define uma área para uma categoria
+
+            Declarar item de Seleção
+                <option value=""> </option>         -> Utilizado dentro de optgroup ou diretamente dentro de select, cria um novo item para o seletor.
+
+            Atributos de item de seleção
+                selected                            -> Define um item de seleção como selecionado por padrão
+
+        Lista de dados (datalist)
+            Declarar Lista de dados
+                <datalist id=""> </datalist>        -> Define a área de uma lista de dados
+
+            Declarar um item para uma lista de dados
+                <option> </option>                  -> Declarado dentro da área de datalist cria um item para a lista
+
+        Area de texto (textarea)
+            Declarar Área de texto
+                <textarea name="" id="" cols="" rows=""> </textarea>    -> Define uma área de texto do tamanho de colunas e linhas especificado (Utilizar POST, pq o get só aceita até 3000 bytes)
 
         Etiqueta (label)
             Declarar Etiqueta
@@ -292,6 +344,10 @@ Formulário
 
             Atributos de etiqueta
                 for=""              -> Associa a etiqueta ao ID de uma entrada
+
+        Saída (output)
+            Declarar Saída
+                <output id=""> </output>            -> Define uma área de saída de dados e atribui um id a ela.
 
     Dicas
         - Por padrão, um iframe possui 300x150 pixels de tamanho.

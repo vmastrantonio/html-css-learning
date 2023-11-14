@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form action="cadastro.php" method="get">
+        <fieldset>
+            <legend>Teste de output no range</legend>
+            <label for="irange">Range: </label>
+            <input type="range" name="range" id="irange" oninput="valor.innerHTML = Number(irange.value)">
+            <output id="valor">50</output>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
