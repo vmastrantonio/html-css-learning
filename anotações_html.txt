@@ -238,7 +238,7 @@ Iframe
 
     Atributos
         src=""                      -> Define o caminho do conteúdo do iframe, pode ser um link para arquivos externos ou o caminho para arquivos internos.
-        name=""                     -> Define um nome para o iframe, com isso pode atualizar o conteúdo do iframe através de uma ancora externa utilizando target="nome".
+        name=""                     -> Define um nome para o iframe.
         frameborder=""              -> Define se o iframe possui borda ou não, utilizamos "0" para remover a borda ou "1" para deixar a borda.
         srcdoc=""                   -> Permite adicionar código html livremente dentro de um iframe.
         scrolling=""
@@ -254,6 +254,44 @@ Iframe
         refeerrerpolicy=""          -> Define se o conteúdo do iframe consegue coletar informações/dados do usuário.
             - no-referrer-when-downgrade            -> Atributo padrão
             - no-referrer                           -> Define que o iframe não poderá coletar nenhuma informação do usuário.
+
+Formulário
+
+    Declarações e atributos
+        Formulário (form)
+            Declarar formulário
+                <form> </form>      -> Define a área de um formulário.
+
+            Atributos de formulário
+                method=""           -> Define o método de envio dos dados do formulário.
+                    - GET       -> O get é o atributo padrão de method, o get serve para formulários de conteúdo não sensivel, que não precisam de segurança adicional. Além disso, o get só funciona para formulários de até 3000 bytes
+                    - POST      -> Ao contrário do get, o post é recomandado para conteúdos que necessitam de segurança, como senhas, arquivos, fotos e cartões de crédito.
+                action=""           -> Define a ação que irá ocorrer ao clicar no botão de submit
+                autocomplete=""     -> Permite alterar se o navegador vai sugerir o preenchimento do formulário
+                    - off       -> Desativa as sugestões de preenchimento
+
+        Entrada (input)
+            Declarar entrada
+                <input>             -> Define uma área de entrada
+
+            Atributos de entrada
+                name=""             -> Define um nome para a entrada
+                type=""             -> Define o tipo da entrada
+                    - text      -> Define que a entrada será uma caixa de texto
+                    - submit    -> Define
+                requited            -> Define que o campo deve obrigatoriamente ser preenchido
+                placeholder=""      -> Define o texto descritivo de dentro do label.
+                size=""             -> Define o tamanho da caixa do input com base no número de caracteres.
+                minlenght=""        -> Define o número mínimo de caracteres aceito.
+                maxlenght=""        -> Define o número máximo de caracteres aceito.
+                autocomplete=""        -> O autocomplete de entrada define para o navegador o tipo de informação daquela entrada, para que tenha mais precisão nas sugestões de complete, lembrando que para ser utilizada o autocomplete do formulário deve estar on e que os valores são pré-definidos.
+
+        Etiqueta (label)
+            Declarar Etiqueta
+                <label> </label>    -> Define a área do conteúdo de uma etiqueta
+
+            Atributos de etiqueta
+                for=""              -> Associa a etiqueta ao ID de uma entrada
 
     Dicas
         - Por padrão, um iframe possui 300x150 pixels de tamanho.
