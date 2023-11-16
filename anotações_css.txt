@@ -66,6 +66,22 @@
 
 
 
+### Media Queries
+    As Media Queries são um recurso do CSS3 que permite a renderização de conteúdo para se adaptar a diferentes condições.
+
+    ## Utilização de media query
+        A utilização de media query nos permite termos diferentes arquivos CSS dependendo do dispositivo utilizado pelo usuário.
+
+    ## Media types (Tipos de mídia)
+        # <link rel="stylesheet" href="style.css" media="screen">   -> Define um arquivo CSS para dispositivos desktop
+        # <link rel="stylesheet" href="style.css" media="handheld"> -> Define um arquivo CSS para dispositivos de mão
+        # <link rel="stylesheet" href="style.css" media="print">    -> Define um arquivo CSS para imprimir a página
+        # <link rel="stylesheet" href="style.css" media="all">      -> Define um arquivo CSS para todos dispositivos
+
+    ## Media features (Caracteristicas de mídia)
+        # <link rel="stylesheet" href="style.css" media="screen and (orientation: portrait)">   -> Define um arquivo CSS para telas na visualização RETRATO
+        # <link rel="stylesheet" href="style.css" media="screen and (orientation: landscape)">   -> Define um arquivo CSS para telas na visualização RETRATO
+
 ### Atributos
     ## Atributos de tamanho
         # height            -> Define a altura de um elemento, geralmente especificada em unidades como "px," "%" ou "em."

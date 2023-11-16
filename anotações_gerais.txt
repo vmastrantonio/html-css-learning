@@ -1,0 +1,8 @@
+﻿mobile first -> Desenvolver a tela primeiro para mobile e depois fazer alterações para que funcione em outros dispositivo (pesquisar vantagens e se ainda é utilizado e por quem é utilizado)
+
+-> BreakPoints (W3C)
+Celulares                               / max-width: 600px
+Tablets pequenos e celulares grandes    / min-width: 600px
+Tablets                                 / min-width: 768px
+Laptops e desktop pequenos              / min-width: 992px
+Laptops e desktop grandes               / min-width: 1200px
